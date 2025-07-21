@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import VideoBackground from './components/VideoBackground';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import { Loader2 } from 'lucide-react';
 
 // Lazy loading des pages pour optimiser les performances
@@ -13,6 +14,10 @@ const Services = lazy(() => import('./pages/Services'));
 const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
 const Portfolio = lazy(() => import('./pages/Portfolio'));
 const Contact = lazy(() => import('./pages/Contact'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+const CGV = lazy(() => import('./pages/CGV'));
+const LegalNotice = lazy(() => import('./pages/LegalNotice'));
 
 // Composant de chargement
 const LoadingSpinner: React.FC = () => (
@@ -31,6 +36,7 @@ const LoadingSpinner: React.FC = () => (
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="relative min-h-screen">
         {/* Vidéo de fond fixe */}
         <VideoBackground />
@@ -48,6 +54,10 @@ function App() {
               <Route path="/services/:slug" element={<ServiceDetail />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/cgv" element={<CGV />} />
+              <Route path="/legal" element={<LegalNotice />} />
               {/* Route 404 - redirection vers l'accueil */}
               <Route path="*" element={<Home />} />
             </Routes>

@@ -1,8 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Cross, Lightbulb, Shield } from 'lucide-react';
+import SEO from '../components/SEO';
+import { useAboutSEOData } from '../hooks/useSEOData';
 
 const About: React.FC = () => {
+  const seoData = useAboutSEOData();
+  
   const values = [
     {
       icon: Cross,
@@ -70,7 +74,9 @@ const About: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <>
+      <SEO seoData={seoData} />
+      <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto text-center">
@@ -370,7 +376,8 @@ const About: React.FC = () => {
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

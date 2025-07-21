@@ -3,10 +3,14 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Check, Star, Users, Clock, Award } from 'lucide-react';
 import { services } from '../services/data';
+import SEO from '../components/SEO';
+import { useServiceSEOData } from '../hooks/useSEOData';
 
 const ServiceDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = services.find(s => s.slug === slug);
+  
+  const seoData = service ? useServiceSEOData(service.title, service.description, service.slug) : null;
 
   if (!service) {
     return (
@@ -60,7 +64,9 @@ const ServiceDetail: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <>
+      {seoData && <SEO seoData={seoData} />}
+      <div className="min-h-screen pt-20">
       {/* Breadcrumb */}
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -284,6 +290,7 @@ const ServiceDetail: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

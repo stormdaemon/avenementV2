@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Play, Star, Users, Award, Zap } from 'lucide-react';
 import { services } from '../services/data';
+import SEO from '../components/SEO';
+import { useHomeSEOData } from '../hooks/useSEOData';
 
 const Home: React.FC = () => {
+  const seoData = useHomeSEOData();
+  
   const stats = [
     { icon: Users, value: '500+', label: 'Clients Satisfaits' },
     { icon: Award, value: '1000+', label: 'Projets Réalisés' },
@@ -34,7 +38,9 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO seoData={seoData} />
+      <div className="min-h-screen">
       {/* Section Héro */}
       <section className="relative min-h-screen flex items-center justify-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -74,12 +80,7 @@ const Home: React.FC = () => {
             >
               <Link to="/contact" className="btn-primary group">
                 Démarrer Votre Projet
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <button className="btn-secondary group">
-                <Play className="mr-2 w-5 h-5" />
-                Voir Notre Showreel
-              </button>
             </motion.div>
           </motion.div>
         </div>
@@ -317,7 +318,8 @@ const Home: React.FC = () => {
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

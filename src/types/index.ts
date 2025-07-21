@@ -33,6 +33,7 @@ export interface Project {
   client?: string;
   date: string;
   tags: string[];
+  url?: string | null;
 }
 
 export interface ContactForm {

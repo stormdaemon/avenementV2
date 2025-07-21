@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import type { ContactForm } from '../types';
+import SEO from '../components/SEO';
+import { useContactSEOData } from '../hooks/useSEOData';
 
 const Contact: React.FC = () => {
+  const seoData = useContactSEOData();
+  
   const [formData, setFormData] = useState<ContactForm>({
     name: '',
     email: '',
@@ -34,8 +38,8 @@ const Contact: React.FC = () => {
     {
       icon: Phone,
       title: 'Téléphone',
-      content: '+33 1 23 45 67 89',
-      link: 'tel:+33123456789',
+      content: '+ 33 1 71 68 15 38',
+      link: 'tel:+33171681538',
     },
     {
       icon: MapPin,
@@ -81,7 +85,9 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <>
+      <SEO seoData={seoData} />
+      <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto text-center">
@@ -374,6 +380,7 @@ const Contact: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

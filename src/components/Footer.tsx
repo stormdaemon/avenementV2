@@ -142,10 +142,10 @@ const Footer: React.FC = () => {
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-5 h-5 text-gold-400" />
                   <a
-                    href="tel:+33123456789"
+                    href="tel:+33171681538"
                     className="hover:text-gold-400 transition-colors duration-200 text-sm"
                   >
-                    +33 1 23 45 67 89
+                    + 33 1 71 68 15 38
                   </a>
                 </div>
                 <div className="flex items-start space-x-3 text-gray-300">
@@ -174,7 +174,7 @@ const Footer: React.FC = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="flex space-x-6 text-sm"
+              className="flex flex-wrap justify-center md:justify-end gap-4 text-sm"
             >
               <Link
                 to="/privacy"
@@ -187,6 +187,18 @@ const Footer: React.FC = () => {
                 className="text-gray-400 hover:text-gold-400 transition-colors duration-200"
               >
                 Conditions d'utilisation
+              </Link>
+              <Link
+                to="/cgv"
+                className="text-gray-400 hover:text-gold-400 transition-colors duration-200"
+              >
+                CGV
+              </Link>
+              <Link
+                to="/legal"
+                className="text-gray-400 hover:text-gold-400 transition-colors duration-200"
+              >
+                Mentions légales
               </Link>
             </motion.div>
           </div>
