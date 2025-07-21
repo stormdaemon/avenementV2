@@ -199,7 +199,10 @@ const Portfolio: React.FC = () => {
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                           onError={(e) => {
                             e.currentTarget.style.display = 'none';
-                            e.currentTarget.nextElementSibling.style.display = 'flex';
+                            const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                            if (nextElement) {
+                              nextElement.style.display = 'flex';
+                            }
                           }}
                         />
                         <div className="absolute inset-0 bg-gradient-to-br from-gold-400/20 to-gold-600/20 flex items-center justify-center" style={{display: 'none'}}>
@@ -343,7 +346,10 @@ const Portfolio: React.FC = () => {
                        className="w-full h-full object-cover"
                        onError={(e) => {
                          e.currentTarget.style.display = 'none';
-                         e.currentTarget.nextElementSibling.style.display = 'flex';
+                         const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                         if (nextElement) {
+                           nextElement.style.display = 'flex';
+                         }
                        }}
                      />
                      <div className="absolute inset-0 bg-gradient-to-br from-gold-400/20 to-gold-600/20 rounded-2xl flex items-center justify-center" style={{display: 'none'}}>

@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import type { NavigationItem } from '../types';
+import logo from '../assets/logo.png';
 
 const navigationItems: NavigationItem[] = [
   { label: 'Accueil', href: '/' },
@@ -60,6 +61,12 @@ const Navigation: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
+            <motion.img
+              src={logo}
+              alt="Avènement Logo"
+              whileHover={{ scale: 1.05 }}
+              className="w-12 h-12 rounded-full border-2 border-gold-400 object-cover"
+            />
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="text-2xl font-bold text-gold-400 text-glow"

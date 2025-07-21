@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Play, Star, Users, Award, Zap } from 'lucide-react';
+import { ArrowRight, Star, Users, Award, Zap } from 'lucide-react';
 import { services } from '../services/data';
 import SEO from '../components/SEO';
 import { useHomeSEOData } from '../hooks/useSEOData';

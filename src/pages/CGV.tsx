@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Euro, Truck, RotateCcw, Scale, AlertTriangle, Clock, Shield } from 'lucide-react';
+import { FileText, Euro, RotateCcw, Scale, AlertTriangle, Clock, Shield } from 'lucide-react';
 import SEO from '../components/SEO';
 import { usePageSEOData } from '../hooks/useSEOData';
 
