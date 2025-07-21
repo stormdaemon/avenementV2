@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
 import type { ContactForm } from '../types';
 import SEO from '../components/SEO';
 import { useContactSEOData } from '../hooks/useSEOData';
+import Modal from '../components/Modal';
 
 const Contact: React.FC = () => {
   const seoData = useContactSEOData();
+  const [state, handleSubmit] = useForm('mqabdbpj');
   
   const [formData, setFormData] = useState<ContactForm>({
     name: '',
@@ -16,8 +19,7 @@ const Contact: React.FC = () => {
     service: '',
     message: '',
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const services = [
     'Diffusion Multi-Stream',
@@ -32,8 +34,8 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email',
-      content: 'contact@ultreiaevent.com',
-    link: 'mailto:contact@ultreiaevent.com',
+      content: 'catholicloungemusic@mail.com',
+      link: 'mailto:catholicloungemusic@mail.com',
     },
     {
       icon: Phone,
@@ -60,19 +62,15 @@ const Contact: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const onSubmit = async (e: React.FormEvent) => {
+    await handleSubmit(e);
+  };
 
-    // Simulation d'envoi de formulaire
-    await new Promise(resolve => setTimeout(resolve, 2000));
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
+  // Effect to show modal when form is successfully submitted
+  React.useEffect(() => {
+    if (state.succeeded) {
+      setShowModal(true);
+      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -81,7 +79,11 @@ const Contact: React.FC = () => {
         service: '',
         message: '',
       });
-    }, 3000);
+    }
+  }, [state.succeeded]);
+
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -143,12 +145,12 @@ const Contact: React.FC = () => {
                   {info.link !== '#' ? (
                     <a
                       href={info.link}
-                      className="text-gray-300 hover:text-gold-400 transition-colors"
+                      className="text-gray-300 hover:text-gold-400 transition-colors break-words text-sm"
                     >
                       {info.content}
                     </a>
                   ) : (
-                    <p className="text-gray-300">{info.content}</p>
+                    <p className="text-gray-300 break-words text-sm">{info.content}</p>
                   )}
                 </motion.div>
               );
@@ -175,22 +177,10 @@ const Contact: React.FC = () => {
               </p>
             </div>
 
-            {isSubmitted ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="text-center py-12"
-              >
-                <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  Message Envoyé avec Succès !
-                </h3>
-                <p className="text-gray-300">
-                  Nous vous recontacterons très bientôt. Merci pour votre confiance !
-                </p>
-              </motion.div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={onSubmit} className="space-y-6">
+              {/* Hidden fields for Formspree */}
+              <input type="hidden" name="_replyto" value={formData.email} />
+              <input type="hidden" name="_subject" value={`Demande de ${formData.service} - ultreiaevent`} />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-white font-medium mb-2">
@@ -292,32 +282,44 @@ const Contact: React.FC = () => {
                   />
                 </div>
 
+                <ValidationError 
+                  prefix="Email" 
+                  field="email"
+                  errors={state.errors}
+                  className="text-red-400 text-sm mt-1"
+                />
+                <ValidationError 
+                  prefix="Message" 
+                  field="message"
+                  errors={state.errors}
+                  className="text-red-400 text-sm mt-1"
+                />
+
                 <motion.button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={state.submitting}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="w-full bg-gradient-to-r from-gold-400 to-gold-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:from-gold-500 hover:to-gold-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                 >
-                  {isSubmitting ? (
+                  {state.submitting ? (
                     <>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                       <span>Envoi en cours...</span>
                     </>
                   ) : (
                     <>
-                      <Send className="w-5 h-5" />
-                      <span>Envoyer ma demande</span>
-                    </>
-                  )}
-                </motion.button>
+                       <Send className="w-5 h-5" />
+                       <span>Envoyer ma demande</span>
+                     </>
+                   )}
+                 </motion.button>
 
-                <p className="text-gray-400 text-sm text-center">
+                 <p className="text-gray-400 text-sm text-center">
                   En soumettant ce formulaire, vous acceptez d'être recontacté par notre équipe
                   concernant votre demande.
                 </p>
               </form>
-            )}
           </motion.div>
         </div>
       </section>
@@ -379,6 +381,26 @@ const Contact: React.FC = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Success Modal */}
+      <Modal
+        isOpen={showModal}
+        onClose={closeModal}
+        title="Message Envoyé avec Succès !"
+        type="success"
+      >
+        <p className="mb-4">
+          Nous vous recontacterons très bientôt. Merci pour votre confiance !
+        </p>
+        <motion.button
+          onClick={closeModal}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-gradient-to-r from-gold-400 to-gold-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover:from-gold-500 hover:to-gold-700"
+        >
+          Fermer
+        </motion.button>
+      </Modal>
     </div>
     </>
   );
