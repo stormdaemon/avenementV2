@@ -50,6 +50,23 @@ export interface SEOData {
   keywords: string[];
   ogImage?: string;
   canonical?: string;
+  openGraph?: {
+    title?: string;
+    description?: string;
+    url?: string;
+    type?: string;
+    image?: string;
+    imageAlt?: string;
+  };
+  twitter?: {
+    card?: string;
+    title?: string;
+    description?: string;
+    image?: string;
+    imageAlt?: string;
+    site?: string;
+  };
+  structuredData?: object;
 }
 
 export interface NavigationItem {

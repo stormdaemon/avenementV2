@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { SEOData } from '../types';
+import type { SEOData } from '../types';
 
 /**
  * Hook personnalisé pour gérer le SEO dynamique des pages

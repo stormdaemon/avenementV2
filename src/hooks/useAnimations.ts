@@ -53,7 +53,7 @@ export const useParallax = (speed: number = 0.5) => {
 export const useInViewAnimation = (threshold: number = 0.1) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { 
-    threshold,
+    amount: threshold,
     once: true // Animation une seule fois
   });
 
@@ -119,8 +119,8 @@ export const useTypingEffect = (text: string, speed: number = 50) => {
 export const useCounterAnimation = (end: number, duration: number = 2000, start: number = 0) => {
   const [count, setCount] = useState(start);
   const [isAnimating, setIsAnimating] = useState(false);
-  const frameRef = useRef<number>();
-  const startTimeRef = useRef<number>();
+  const frameRef = useRef<number>(0);
+  const startTimeRef = useRef<number>(0);
 
   const startAnimation = () => {
     if (isAnimating) return;

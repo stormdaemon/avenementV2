@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Target, Users, Award, Cross, Lightbulb, Shield, Zap } from 'lucide-react';
+import { Heart, Cross, Lightbulb, Shield } from 'lucide-react';
 
 const About: React.FC = () => {
   const values = [
@@ -28,29 +28,17 @@ const About: React.FC = () => {
 
   const team = [
     {
-      name: 'Marie Dubois',
-      role: 'Directrice Créative',
-      image: '/team/marie.jpg',
-      bio: 'Spécialisée en communication religieuse depuis 10 ans, Marie guide notre vision créative avec passion et expertise.',
+      name: 'Samuel Armnius',
+      role: 'CEO',
+      image: '/team/sam.jpg',
+      bio: 'Fondateur de l\'agence Avènement.',
     },
     {
-      name: 'Pierre Martin',
-      role: 'Directeur Technique',
-      image: '/team/pierre.jpg',
-      bio: 'Expert en diffusion multi-stream et technologies audiovisuelles, Pierre assure la qualité technique de nos projets.',
-    },
-    {
-      name: 'Sophie Leroy',
-      role: 'Responsable Événementiel',
-      image: '/team/sophie.jpg',
-      bio: 'Organisatrice d\'événements religieux depuis 8 ans, Sophie coordonne vos projets avec minutie et dévotion.',
-    },
-    {
-      name: 'Thomas Moreau',
-      role: 'Développeur Web',
-      image: '/team/thomas.jpg',
-      bio: 'Développeur passionné, Thomas crée des sites web modernes et optimisés pour les organisations catholiques.',
-    },
+      name: 'Théo Lafont',
+      role: 'Développeur Full Stack',
+      image: '/team/theo.jpg',
+      bio: 'Développeur Full Stack avec 10 ans d\'expertise.',
+    }
   ];
 
   const stats = [
@@ -77,7 +65,7 @@ const About: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: 'easeOut',
+        ease: [0.25, 0.1, 0.25, 1],
       },
     },
   };
@@ -96,10 +84,12 @@ const About: React.FC = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-white text-glow">
               À Propos d'<span className="text-gold-400">Avènement</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed text-center">
-              Une agence de communication catholique dédiée à amplifier votre message spirituel 
-              grâce à des solutions modernes et authentiques.
-            </p>
+            <div className="flex justify-center px-4">
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl text-center leading-relaxed">
+                Une agence de communication catholique dédiée à amplifier votre message spirituel
+                grâce à des solutions modernes et authentiques.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -119,21 +109,21 @@ const About: React.FC = () => {
               </h2>
               <div className="space-y-6 text-gray-300 leading-relaxed">
                 <p className="text-lg">
-                  Chez Avènement, nous croyons que chaque message spirituel mérite d'être entendu 
-                  et partagé avec excellence. Notre mission est d'accompagner les organisations 
+                  Chez Avènement, nous croyons que chaque message spirituel mérite d'être entendu
+                  et partagé avec excellence. Notre mission est d'accompagner les organisations
                   catholiques dans leur communication en alliant tradition et innovation.
                 </p>
                 <p className="text-lg">
-                  Nous mettons notre expertise technique et notre compréhension profonde des 
+                  Nous mettons notre expertise technique et notre compréhension profonde des
                   valeurs catholiques au service de votre rayonnement spirituel et communautaire.
                 </p>
                 <p className="text-lg">
-                  Que ce soit pour diffuser une messe en direct, organiser un événement religieux 
+                  Que ce soit pour diffuser une messe en direct, organiser un événement religieux
                   ou créer votre présence digitale, nous vous accompagnons avec passion et professionnalisme.
                 </p>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -177,9 +167,12 @@ const About: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Nos <span className="text-gold-400">Valeurs</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Les principes qui guident notre travail et notre engagement envers vous
-            </p>
+
+            <div className="flex justify-center px-4">
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl text-center leading-relaxed">
+                Les principes qui guident notre travail et notre engagement envers vous
+              </p>
+            </div>
           </motion.div>
 
           <motion.div
@@ -189,7 +182,7 @@ const About: React.FC = () => {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 gap-8"
           >
-            {values.map((value, index) => {
+            {values.map((value) => {
               const Icon = value.icon;
               return (
                 <motion.div
@@ -232,9 +225,13 @@ const About: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Notre <span className="text-gold-400">Équipe</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto text-center">
-              Des professionnels passionnés au service de votre mission
-            </p>
+
+
+            <div className="flex justify-center px-4">
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl text-center leading-relaxed">
+                Des professionnels passionnés au service de votre mission
+              </p>
+            </div>
           </motion.div>
 
           <motion.div
@@ -242,9 +239,9 @@ const About: React.FC = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
           >
-            {team.map((member, index) => (
+            {team.map((member) => (
               <motion.div
                 key={member.name}
                 variants={itemVariants}
@@ -252,8 +249,17 @@ const About: React.FC = () => {
                 className="glass-card p-6 text-center group"
               >
                 <div className="relative mb-6">
-                  <div className="w-32 h-32 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full mx-auto flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                    <Users className="w-16 h-16 text-white" />
+                  <div className="w-32 h-32 rounded-full mx-auto overflow-hidden group-hover:scale-105 transition-transform duration-300 border-4 border-gold-400">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        target.parentElement!.innerHTML = '<div class="w-full h-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center"><svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>';
+                      }}
+                    />
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-gold-400 transition-colors">
@@ -284,24 +290,18 @@ const About: React.FC = () => {
               </h2>
               <div className="space-y-6 text-gray-300 leading-relaxed">
                 <p className="text-lg">
-                  Fondée en 2019 par une équipe de professionnels de la communication 
-                  partageant une foi commune, Avènement est née d'un constat simple : 
-                  les organisations catholiques avaient besoin d'une expertise technique 
-                  alliée à une compréhension profonde de leurs valeurs.
+                  Avènement est née en 2025 de la rencontre de deux passionnés réunis autour d’un projet commun : <strong>Heaven Radio</strong>, une webradio catholique lancée en 2024. Portés par leur foi et leur volonté de proposer une communication authentique et enracinée dans l’Évangile, ils ont décidé de mettre leur savoir-faire au service du plus grand nombre en créant l’agence.
                 </p>
                 <p className="text-lg">
-                  Depuis nos débuts, nous avons accompagné plus de 500 paroisses, 
-                  communautés et organisations catholiques dans leur transformation 
-                  digitale et leur rayonnement communicationnel.
+                  Depuis, nous accompagnons paroisses, communautés et organisations catholiques dans leur transformation digitale et leur rayonnement communicationnel, en alliant exigence technique, créativité et fidélité aux valeurs spirituelles.
                 </p>
                 <p className="text-lg">
-                  Aujourd'hui, nous sommes fiers d'être reconnus comme l'agence de 
-                  référence pour la communication catholique en France, alliant 
-                  innovation technologique et respect des traditions spirituelles.
+                  Aujourd’hui, nous poursuivons cette mission avec fierté, dans l’ambition de devenir une référence incontournable de la communication catholique en France.
                 </p>
+
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -310,12 +310,8 @@ const About: React.FC = () => {
               className="space-y-8"
             >
               {[
-                { year: '2019', event: 'Création d\'Avènement avec 3 collaborateurs passionnés' },
-                { year: '2020', event: 'Lancement des services de diffusion multi-stream pendant la pandémie' },
-                { year: '2021', event: 'Expansion de l\'équipe et développement des services événementiels' },
-                { year: '2022', event: 'Ouverture du pôle création de sites web et réseaux sociaux' },
-                { year: '2023', event: 'Plus de 500 clients accompagnés et reconnaissance nationale' },
-                { year: '2024', event: 'Innovation continue et nouvelles technologies immersives' },
+                { year: '2024', event: 'Création de notre WebRadio Heaven Radio, la radio 100% Louange et Adoration.' },
+                { year: '2025', event: 'Création de l\'agence de communication catholique Avènement.' },
               ].map((milestone, index) => (
                 <motion.div
                   key={milestone.year}
@@ -351,7 +347,7 @@ const About: React.FC = () => {
               Rejoignez Notre <span className="text-gold-400">Communauté</span>
             </h2>
             <p className="text-xl text-gray-300">
-              Découvrez comment nous pouvons vous aider à amplifier votre message 
+              Découvrez comment nous pouvons vous aider à amplifier votre message
               et toucher votre communauté avec authenticité
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
