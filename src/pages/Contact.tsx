@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
 import type { ContactForm } from '../types';
 import SEO from '../components/SEO';
@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const onSubmit = async (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     await handleSubmit(e);
   };
 
