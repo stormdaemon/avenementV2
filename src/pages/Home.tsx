@@ -56,7 +56,7 @@ const Home: React.FC = () => {
               animate={{ scale: 1 }}
               transition={{ duration: 1.2 }}
             >
-              Avènement
+              ultreiaevent
               <span className="block text-gold-400 text-4xl md:text-5xl lg:text-6xl mt-4">
                 Communication Catholique
               </span>

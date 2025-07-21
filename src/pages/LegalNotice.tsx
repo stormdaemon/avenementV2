@@ -7,7 +7,7 @@ import { usePageSEOData } from '../hooks/useSEOData';
 const LegalNotice: React.FC = () => {
   const seoData = usePageSEOData(
     'Mentions légales',
-    'Mentions légales du site Avènement. Informations sur l\'éditeur WADY PRODUCTIONS, hébergement et directeur de publication.',
+    'Mentions légales du site ultreiaevent. Informations sur l\'éditeur WADY PRODUCTIONS, hébergement et directeur de publication.',
     '/legal'
   );
 
@@ -86,7 +86,7 @@ const LegalNotice: React.FC = () => {
       content: [
         {
           label: "Président",
-          value: "[Nom du Président à préciser]"
+          value: "Samuel Armnius"
         },
         {
           label: "Qualité",
@@ -100,7 +100,7 @@ const LegalNotice: React.FC = () => {
       content: [
         {
           label: "Email",
-          value: "contact@avenement.fr"
+          value: "contact@ultreiaevent.com"
         },
         {
           label: "Téléphone",
@@ -136,7 +136,7 @@ const LegalNotice: React.FC = () => {
         },
         {
           label: "Qualité",
-          value: "Président de WADY PRODUCTIONS"
+          value: "Développeur Full Stack et Directeur Technique"
         },
         {
           label: "Contact",
@@ -162,7 +162,7 @@ const LegalNotice: React.FC = () => {
               Mentions légales
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Informations légales relatives au site www.avenement.fr, 
+              Informations légales relatives au site www.ultreiaevent.com, 
               conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004.
             </p>
             <div className="mt-6 text-sm text-gray-400">
@@ -248,7 +248,7 @@ const LegalNotice: React.FC = () => {
                 </p>
                 <p>
                   Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, merci de 
-                  bien vouloir le signaler par e-mail à l'adresse contact@avenement.fr, en décrivant le 
+                  bien vouloir le signaler par e-mail à l'adresse contact@ultreiaevent.com, en décrivant le 
                   problème de la façon la plus précise possible.
                 </p>
                 <p>
@@ -300,8 +300,8 @@ const LegalNotice: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                   <div className="flex items-center space-x-3">
                     <Mail className="w-5 h-5 text-gold-400" />
-                    <a href="mailto:contact@avenement.fr" className="text-gold-400 hover:underline">
-                      contact@avenement.fr
+                    <a href="mailto:contact@ultreiaevent.com" className="text-gold-400 hover:underline">
+                  contact@ultreiaevent.com
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">

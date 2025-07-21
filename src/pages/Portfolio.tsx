@@ -453,7 +453,7 @@ const Portfolio: React.FC = () => {
               {
                 name: 'Mgr Jean Dubois',
                 role: 'Évêque de Lyon',
-                content: 'Avènement a transformé notre communication diocésaine. Leur expertise technique alliée à leur compréhension de nos valeurs est remarquable.',
+                content: 'ultreiaevent a transformé notre communication diocésaine. Leur expertise technique alliée à leur compréhension de nos valeurs est remarquable.',
               },
               {
                 name: 'Père Michel Martin',
@@ -463,7 +463,7 @@ const Portfolio: React.FC = () => {
               {
                 name: 'Sœur Marie-Claire',
                 role: 'Responsable Communication',
-                content: 'L\'équipe d\'Avènement a su créer un site web qui reflète parfaitement l\'esprit de notre communauté. Professionnel et authentique.',
+                content: 'L\'équipe d\'ultreiaevent a su créer un site web qui reflète parfaitement l\'esprit de notre communauté. Professionnel et authentique.',
               },
             ].map((testimonial, index) => (
               <motion.div

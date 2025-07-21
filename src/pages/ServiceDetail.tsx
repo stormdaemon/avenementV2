@@ -52,13 +52,13 @@ const ServiceDetail: React.FC = () => {
     {
       name: 'Père Michel Dubois',
       role: 'Paroisse Saint-Joseph',
-      content: 'Grâce à Avènement, nos messes sont maintenant suivies par des centaines de fidèles en ligne. Un service exceptionnel !',
+      content: 'Grâce à ultreiaevent, nos messes sont maintenant suivies par des centaines de fidèles en ligne. Un service exceptionnel !',
       rating: 5,
     },
     {
       name: 'Sœur Marie-Claire',
       role: 'Communauté des Béatitudes',
-      content: 'L\'équipe d\'Avènement a su comprendre nos valeurs et les traduire dans une communication moderne et authentique.',
+      content: 'L\'équipe d\'ultreiaevent a su comprendre nos valeurs et les traduire dans une communication moderne et authentique.',
       rating: 5,
     },
   ];

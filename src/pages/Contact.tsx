@@ -32,8 +32,8 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email',
-      content: 'contact@avenement.fr',
-      link: 'mailto:contact@avenement.fr',
+      content: 'contact@ultreiaevent.com',
+    link: 'mailto:contact@ultreiaevent.com',
     },
     {
       icon: Phone,

@@ -7,7 +7,7 @@ import { usePageSEOData } from '../hooks/useSEOData';
 const Terms: React.FC = () => {
   const seoData = usePageSEOData(
     'Conditions d\'utilisation',
-    'Consultez les conditions générales d\'utilisation du site Avènement. Modalités d\'accès et d\'utilisation de nos services.',
+    'Consultez les conditions générales d\'utilisation du site ultreiaevent. Modalités d\'accès et d\'utilisation de nos services.',
     '/terms'
   );
 
@@ -16,7 +16,7 @@ const Terms: React.FC = () => {
       icon: FileText,
       title: "Objet",
       content: [
-        "Les présentes conditions générales d'utilisation (CGU) ont pour objet de définir les modalités et conditions d'utilisation du site web www.avenement.fr (ci-après \"le Site\") édité par WADY PRODUCTIONS.",
+        "Les présentes conditions générales d'utilisation (CGU) ont pour objet de définir les modalités et conditions d'utilisation du site web www.ultreiaevent.com (ci-après \"le Site\") édité par WADY PRODUCTIONS.",
         "L'utilisation du Site implique l'acceptation pleine et entière des présentes CGU. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser le Site."
       ]
     },
@@ -89,7 +89,7 @@ const Terms: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Les présentes conditions générales d'utilisation régissent l'accès et l'utilisation 
-              du site web Avènement.
+              du site web ultreiaevent.
             </p>
             <div className="mt-6 text-sm text-gray-400">
               Dernière mise à jour : {new Date().toLocaleDateString('fr-FR')}
@@ -184,7 +184,7 @@ const Terms: React.FC = () => {
                   nous contacter :
                 </p>
                 <ul className="space-y-2 ml-6">
-                  <li>• Par e-mail : contact@avenement.fr</li>
+                  <li>• Par e-mail : contact@ultreiaevent.com</li>
                   <li>• Par courrier : WADY PRODUCTIONS, 7 RUE AMBROISE THOMAS 75009 PARIS</li>
                 </ul>
               </div>

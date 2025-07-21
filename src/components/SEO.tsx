@@ -45,7 +45,7 @@ const SEO: React.FC<SEOProps> = ({ seoData }) => {
               <meta property="og:image:alt" content={seoData.openGraph.title} />
             </>
           )}
-          <meta property="og:site_name" content="Agence Avènement" />
+          <meta property="og:site_name" content="Agence ultreiaevent" />
           <meta property="og:locale" content="fr_FR" />
         </>
       )}
@@ -59,13 +59,13 @@ const SEO: React.FC<SEOProps> = ({ seoData }) => {
           {seoData.twitter.image && (
             <meta name="twitter:image" content={seoData.twitter.image} />
           )}
-          <meta name="twitter:site" content="@avenement_agency" />
+          <meta name="twitter:site" content="@ultreiaevent_agency" />
         </>
       )}
       
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />
-      <meta name="author" content="Agence Avènement" />
+      <meta name="author" content="Agence ultreiaevent" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Language" content="fr" />
       

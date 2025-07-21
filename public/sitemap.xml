@@ -6,7 +6,7 @@
 
   <!-- Page d'accueil -->
   <url>
-    <loc>https://avenement-agency.com/</loc>
+    <loc>https://ultreiaevent.com/</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
   <!-- À propos -->
   <url>
-    <loc>https://avenement-agency.com/about</loc>
+    <loc>https://ultreiaevent.com/about</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -22,7 +22,7 @@
 
   <!-- Services généraux -->
   <url>
-    <loc>https://avenement-agency.com/services</loc>
+    <loc>https://ultreiaevent.com/services</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -30,7 +30,7 @@
 
   <!-- Service: Diffusion Multi-Stream -->
   <url>
-    <loc>https://avenement-agency.com/services/diffusion-multi-stream</loc>
+    <loc>https://ultreiaevent.com/services/diffusion-multi-stream</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -38,7 +38,7 @@
 
   <!-- Service: Réseaux Sociaux -->
   <url>
-    <loc>https://avenement-agency.com/services/reseaux-sociaux</loc>
+    <loc>https://ultreiaevent.com/services/reseaux-sociaux</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -46,7 +46,7 @@
 
   <!-- Service: Organisation d'événements -->
   <url>
-    <loc>https://avenement-agency.com/services/organisation-evenements</loc>
+    <loc>https://ultreiaevent.com/services/organisation-evenements</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -54,7 +54,7 @@
 
   <!-- Service: Films institutionnels -->
   <url>
-    <loc>https://avenement-agency.com/services/films-institutionnels</loc>
+    <loc>https://ultreiaevent.com/services/films-institutionnels</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -62,7 +62,7 @@
 
   <!-- Service: Création de sites web -->
   <url>
-    <loc>https://avenement-agency.com/services/creation-sites-web</loc>
+    <loc>https://ultreiaevent.com/services/creation-sites-web</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -70,7 +70,7 @@
 
   <!-- Portfolio -->
   <url>
-    <loc>https://avenement-agency.com/portfolio</loc>
+    <loc>https://ultreiaevent.com/portfolio</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -78,7 +78,7 @@
 
   <!-- Contact -->
   <url>
-    <loc>https://avenement-agency.com/contact</loc>
+    <loc>https://ultreiaevent.com/contact</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -86,14 +86,14 @@
 
   <!-- Pages de contenu SEO (futures) -->
   <url>
-    <loc>https://avenement-agency.com/blog</loc>
+    <loc>https://ultreiaevent.com/blog</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://avenement-agency.com/actualites</loc>
+    <loc>https://ultreiaevent.com/actualites</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -101,21 +101,21 @@
 
   <!-- Pages légales -->
   <url>
-    <loc>https://avenement-agency.com/mentions-legales</loc>
+    <loc>https://ultreiaevent.com/mentions-legales</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://avenement-agency.com/politique-confidentialite</loc>
+    <loc>https://ultreiaevent.com/politique-confidentialite</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://avenement-agency.com/conditions-utilisation</loc>
+    <loc>https://ultreiaevent.com/conditions-utilisation</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -123,14 +123,14 @@
 
   <!-- Pages de ressources -->
   <url>
-    <loc>https://avenement-agency.com/ressources</loc>
+    <loc>https://ultreiaevent.com/ressources</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://avenement-agency.com/guides</loc>
+    <loc>https://ultreiaevent.com/guides</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
@@ -138,7 +138,7 @@
 
   <!-- Pages de témoignages -->
   <url>
-    <loc>https://avenement-agency.com/testimonials</loc>
+    <loc>https://ultreiaevent.com/testimonials</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -146,7 +146,7 @@
 
   <!-- FAQ -->
   <url>
-    <loc>https://avenement-agency.com/faq</loc>
+    <loc>https://ultreiaevent.com/faq</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>

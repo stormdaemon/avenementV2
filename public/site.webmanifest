@@ -1,8 +1,8 @@
 {
-  "name": "Agence Avènement - Communication Catholique",
-  "short_name": "Avènement",
-  "description": "Agence de communication spécialisée dans le secteur catholique : diffusion, événements, digital et audiovisuel",
-  "start_url": "/",
+  "name": "Agence ultreiaevent - Communication Catholique",
+  "short_name": "ultreiaevent",
+  "description": "Agence de communication spécialisée dans le secteur catholique. Diffusion multi-stream, événements, digital.",
+  "start_url": "https://ultreiaevent.com/",
   "display": "standalone",
   "background_color": "#1a1a1a",
   "theme_color": "#D4AF37",

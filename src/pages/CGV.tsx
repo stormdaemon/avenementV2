@@ -7,7 +7,7 @@ import { usePageSEOData } from '../hooks/useSEOData';
 const CGV: React.FC = () => {
   const seoData = usePageSEOData(
     'Conditions Générales de Vente',
-    'Consultez les conditions générales de vente d\'Avènement. Modalités de commande, paiement, livraison et garanties légales.',
+    'Consultez les conditions générales de vente d\'ultreiaevent. Modalités de commande, paiement, livraison et garanties légales.',
     '/cgv'
   );
 
@@ -82,7 +82,7 @@ const CGV: React.FC = () => {
       title: "Article 7 - Protection des données personnelles",
       content: [
         "Conformément au Règlement (UE) 2016/679 du 27 avril 2016 (RGPD) et à la loi n° 78-17 du 6 janvier 1978 modifiée relative à l'informatique, aux fichiers et aux libertés, l'Acheteur dispose d'un droit d'accès, de rectification, d'effacement, de limitation, de portabilité et d'opposition sur ses données personnelles.",
-        "Ces droits peuvent être exercés en adressant une demande accompagnée d'une copie d'un titre d'identité à l'adresse suivante : contact@avenement.fr",
+        "Ces droits peuvent être exercés en adressant une demande accompagnée d'une copie d'un titre d'identité à l'adresse suivante : contact@ultreiaevent.com",
         "Les données personnelles collectées sont nécessaires à l'exécution du contrat et sont conservées pendant la durée nécessaire à cette exécution, augmentée des délais de prescription légaux."
       ]
     }
@@ -211,7 +211,7 @@ const CGV: React.FC = () => {
                   Les présentes CGV annulent et remplacent toutes les conditions générales antérieurement applicables.
                 </p>
                 <p className="font-semibold text-white">
-                  Pour toute question relative aux présentes CGV, vous pouvez nous contacter à l'adresse suivante : contact@avenement.fr
+                  Pour toute question relative aux présentes CGV, vous pouvez nous contacter à l'adresse suivante : contact@ultreiaevent.com
                 </p>
               </div>
             </motion.div>

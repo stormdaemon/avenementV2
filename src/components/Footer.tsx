@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
               className="mb-6"
             >
               <h3 className="text-2xl font-bold text-gold-400 text-glow mb-4">
-                Avènement
+                ultreiaevent
               </h3>
               <p className="text-gray-300 leading-relaxed">
                 Agence de communication catholique spécialisée dans la diffusion multi-stream, 
@@ -133,10 +133,10 @@ const Footer: React.FC = () => {
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Mail className="w-5 h-5 text-gold-400" />
                   <a
-                    href="mailto:contact@avenement.fr"
+                    href="mailto:contact@ultreiaevent.com"
                     className="hover:text-gold-400 transition-colors duration-200 text-sm"
                   >
-                    contact@avenement.fr
+                    contact@ultreiaevent.com
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -168,7 +168,7 @@ const Footer: React.FC = () => {
               viewport={{ once: true }}
               className="text-gray-400 text-sm"
             >
-              © {currentYear} Avènement. Tous droits réservés.
+              © {currentYear} ultreiaevent. Tous droits réservés.
             </motion.p>
             <motion.div
               initial={{ opacity: 0 }}

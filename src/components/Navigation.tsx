@@ -63,7 +63,7 @@ const Navigation: React.FC = () => {
           <Link to="/" className="flex items-center space-x-3">
             <motion.img
               src={logo}
-              alt="Avènement Logo"
+              alt="ultreiaevent Logo"
               whileHover={{ scale: 1.05 }}
               className="w-12 h-12 rounded-full border-2 border-gold-400 object-cover"
             />
@@ -71,7 +71,7 @@ const Navigation: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               className="text-2xl font-bold text-gold-400 text-glow"
             >
-              Avènement
+              ultreiaevent
             </motion.div>
           </Link>
 

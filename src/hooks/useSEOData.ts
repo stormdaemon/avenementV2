@@ -5,8 +5,8 @@ import type { SEOData } from '../types';
  */
 export const useHomeSEOData = (): SEOData => {
   return {
-    title: 'Avènement - Agence de Communication Catholique | Diffusion, Événements & Digital',
-    description: 'Agence Avènement : spécialiste de la communication catholique. Diffusion multi-stream, organisation d\'événements, films institutionnels, sites web et réseaux sociaux pour diocèses, paroisses et communautés.',
+    title: 'ultreiaevent - Agence de Communication Catholique | Diffusion, Événements & Digital',
+    description: 'Agence ultreiaevent : spécialiste de la communication catholique. Diffusion multi-stream, organisation d\'événements, films institutionnels, sites web et réseaux sociaux pour diocèses, paroisses et communautés.',
     keywords: [
       'agence communication catholique',
       'diffusion messe en direct',
@@ -17,27 +17,27 @@ export const useHomeSEOData = (): SEOData => {
       'réseaux sociaux église',
       'communication diocèse'
     ],
-    canonical: 'https://avenement-agency.com/',
+    canonical: 'https://ultreiaevent.com/',
     openGraph: {
-      title: 'Avènement - Agence de Communication Catholique',
+      title: 'ultreiaevent - Agence de Communication Catholique',
       description: 'Spécialiste de la communication catholique : diffusion en direct, événements, digital et audiovisuel pour diocèses et paroisses.',
-      url: 'https://avenement-agency.com/',
+      url: 'https://ultreiaevent.com/',
       type: 'website',
-      image: 'https://avenement-agency.com/images/og-home.jpg'
+      image: 'https://ultreiaevent.com/images/og-home.jpg'
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Avènement - Agence de Communication Catholique',
+      title: 'ultreiaevent - Agence de Communication Catholique',
       description: 'Spécialiste de la communication catholique : diffusion en direct, événements, digital et audiovisuel pour diocèses et paroisses.',
-      image: 'https://avenement-agency.com/images/twitter-home.jpg'
+      image: 'https://ultreiaevent.com/images/twitter-home.jpg'
     },
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'Agence Avènement',
+      name: 'Agence ultreiaevent',
       description: 'Agence de communication spécialisée dans le secteur catholique',
-      url: 'https://avenement-agency.com',
-      logo: 'https://avenement-agency.com/images/logo.png',
+      url: 'https://ultreiaevent.com',
+      logo: 'https://ultreiaevent.com/images/logo.png',
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+33-1-23-45-67-89',
@@ -45,9 +45,9 @@ export const useHomeSEOData = (): SEOData => {
         availableLanguage: 'French'
       },
       sameAs: [
-        'https://www.facebook.com/avenement.agency',
-        'https://www.instagram.com/avenement.agency',
-        'https://www.linkedin.com/company/avenement-agency'
+        'https://www.facebook.com/ultreiaevent.agency',
+        'https://www.instagram.com/ultreiaevent.agency',
+        'https://www.linkedin.com/company/ultreiaevent-agency'
       ],
       address: {
         '@type': 'PostalAddress',
@@ -63,7 +63,7 @@ export const useHomeSEOData = (): SEOData => {
  */
 export const useServiceSEOData = (serviceName: string, serviceDescription: string, serviceSlug: string): SEOData => {
   return {
-    title: `${serviceName} - Agence Avènement | Communication Catholique`,
+    title: `${serviceName} - Agence ultreiaevent | Communication Catholique`,
     description: serviceDescription,
     keywords: [
       'agence communication catholique',
@@ -73,19 +73,19 @@ export const useServiceSEOData = (serviceName: string, serviceDescription: strin
       'église',
       'communication religieuse'
     ],
-    canonical: `https://avenement-agency.com/services/${serviceSlug}`,
+    canonical: `https://ultreiaevent.com/services/${serviceSlug}`,
     openGraph: {
-      title: `${serviceName} - Agence Avènement`,
+      title: `${serviceName} - Agence ultreiaevent`,
       description: serviceDescription,
-      url: `https://avenement-agency.com/services/${serviceSlug}`,
+      url: `https://ultreiaevent.com/services/${serviceSlug}`,
       type: 'article',
-      image: `https://avenement-agency.com/images/services/${serviceSlug}-og.jpg`
+      image: `https://ultreiaevent.com/images/services/${serviceSlug}-og.jpg`
     },
     twitter: {
       card: 'summary',
-      title: `${serviceName} - Agence Avènement`,
+      title: `${serviceName} - Agence ultreiaevent`,
       description: serviceDescription,
-      image: `https://avenement-agency.com/images/services/${serviceSlug}-twitter.jpg`
+      image: `https://ultreiaevent.com/images/services/${serviceSlug}-twitter.jpg`
     },
     structuredData: {
       '@context': 'https://schema.org',
@@ -107,19 +107,19 @@ export const useServiceSEOData = (serviceName: string, serviceDescription: strin
  */
 export const usePageSEOData = (pageTitle: string, pageDescription: string, pagePath: string): SEOData => {
   return {
-    title: `${pageTitle} - Agence Avènement`,
+    title: `${pageTitle} - Agence ultreiaevent`,
     description: pageDescription,
     keywords: ['agence communication catholique', pageTitle.toLowerCase()],
-    canonical: `https://avenement-agency.com${pagePath}`,
+    canonical: `https://ultreiaevent.com${pagePath}`,
     openGraph: {
-      title: `${pageTitle} - Agence Avènement`,
+      title: `${pageTitle} - Agence ultreiaevent`,
       description: pageDescription,
-      url: `https://avenement-agency.com${pagePath}`,
+      url: `https://ultreiaevent.com${pagePath}`,
       type: 'article'
     },
     twitter: {
       card: 'summary',
-      title: `${pageTitle} - Agence Avènement`,
+      title: `${pageTitle} - Agence ultreiaevent`,
       description: pageDescription
     },
     structuredData: {

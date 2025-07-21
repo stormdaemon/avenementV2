@@ -35,7 +35,7 @@ const About: React.FC = () => {
       name: 'Samuel Armnius',
       role: 'CEO',
       image: '/team/sam.jpg',
-      bio: 'Fondateur de l\'agence Avènement.',
+      bio: 'Fondateur de l\'agence ultreiaevent.',
     },
     {
       name: 'Théo Lafont',
@@ -87,7 +87,7 @@ const About: React.FC = () => {
             className="space-y-6"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white text-glow">
-              À Propos d'<span className="text-gold-400">Avènement</span>
+              À Propos d'<span className="text-gold-400">ultreiaevent</span>
             </h1>
             <div className="flex justify-center px-4">
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl text-center leading-relaxed">
@@ -114,7 +114,7 @@ const About: React.FC = () => {
               </h2>
               <div className="space-y-6 text-gray-300 leading-relaxed">
                 <p className="text-lg">
-                  Chez Avènement, nous croyons que chaque message spirituel mérite d'être entendu
+                  Chez ultreiaevent, nous croyons que chaque message spirituel mérite d'être entendu
                   et partagé avec excellence. Notre mission est d'accompagner les organisations
                   catholiques dans leur communication en alliant tradition et innovation.
                 </p>
@@ -295,7 +295,7 @@ const About: React.FC = () => {
               </h2>
               <div className="space-y-6 text-gray-300 leading-relaxed">
                 <p className="text-lg">
-                  Avènement est née en 2025 de la rencontre de deux passionnés réunis autour d’un projet commun : <strong>Heaven Radio</strong>, une webradio catholique lancée en 2024. Portés par leur foi et leur volonté de proposer une communication authentique et enracinée dans l’Évangile, ils ont décidé de mettre leur savoir-faire au service du plus grand nombre en créant l’agence.
+                  ultreiaevent est née en 2025 de la rencontre de deux passionnés réunis autour d'un projet commun : <strong>Heaven Radio</strong>, une webradio catholique lancée en 2024. Portés par leur foi et leur volonté de proposer une communication authentique et enracinée dans l'Évangile, ils ont décidé de mettre leur savoir-faire au service du plus grand nombre en créant l'agence.
                 </p>
                 <p className="text-lg">
                   Depuis, nous accompagnons paroisses, communautés et organisations catholiques dans leur transformation digitale et leur rayonnement communicationnel, en alliant exigence technique, créativité et fidélité aux valeurs spirituelles.
@@ -316,7 +316,7 @@ const About: React.FC = () => {
             >
               {[
                 { year: '2024', event: 'Création de notre WebRadio Heaven Radio, la radio 100% Louange et Adoration.' },
-                { year: '2025', event: 'Création de l\'agence de communication catholique Avènement.' },
+                { year: '2025', event: 'Création de l\'agence de communication catholique ultreiaevent.' },
               ].map((milestone, index) => (
                 <motion.div
                   key={milestone.year}

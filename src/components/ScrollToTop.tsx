@@ -9,12 +9,8 @@ const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Scroll vers le haut de la page avec une animation fluide
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
+    // Scroll vers le haut de la page instantanément
+    window.scrollTo(0, 0);
   }, [pathname]);
 
   return null;

@@ -7,7 +7,7 @@ import { usePageSEOData } from '../hooks/useSEOData';
 const Privacy: React.FC = () => {
   const seoData = usePageSEOData(
     'Politique de confidentialité',
-    'Découvrez comment Avènement protège vos données personnelles et respecte votre vie privée conformément au RGPD.',
+    'Découvrez comment ultreiaevent protège vos données personnelles et respecte votre vie privée conformément au RGPD.',
     '/privacy'
   );
 
@@ -18,7 +18,7 @@ const Privacy: React.FC = () => {
       content: [
         "WADY PRODUCTIONS, SAS au capital social de [montant], immatriculée au RCS de Paris sous le numéro 920 498 722, dont le siège social est situé au 7 RUE AMBROISE THOMAS 75009 PARIS.",
         "Représentée par son Président, [Nom du Président].",
-        "Contact : contact@avenement.fr"
+        "Contact : contact@ultreiaevent.com"
       ]
     },
     {
@@ -145,7 +145,7 @@ const Privacy: React.FC = () => {
                 vous pouvez nous contacter :
               </p>
               <ul className="space-y-2 ml-6">
-                <li>• Par e-mail : contact@avenement.fr</li>
+                <li>• Par e-mail : contact@ultreiaevent.com</li>
                 <li>• Par courrier : WADY PRODUCTIONS, 7 RUE AMBROISE THOMAS 75009 PARIS</li>
               </ul>
               <p className="mt-6">

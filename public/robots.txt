@@ -87,7 +87,7 @@ User-agent: WebCopier
 Disallow: /
 
 # Localisation du sitemap
-Sitemap: https://avenement-agency.com/sitemap.xml
+Sitemap: https://ultreiaevent.com/sitemap.xml
 
 # Informations de contact pour les webmasters
 # Contact: webmaster@avenement-agency.com
