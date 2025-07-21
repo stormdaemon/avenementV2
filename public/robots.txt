@@ -1,0 +1,103 @@
+# Robots.txt pour Agence Avènement
+# https://avenement-agency.com/robots.txt
+
+# Autoriser tous les robots d'indexation
+User-agent: *
+Allow: /
+
+# Interdire l'accès aux dossiers sensibles
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /.env
+Disallow: /config/
+Disallow: /logs/
+Disallow: /tmp/
+Disallow: /cache/
+
+# Interdire l'indexation des fichiers de développement
+Disallow: /*.json$
+Disallow: /*.xml$ 
+Disallow: /*.txt$
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /build/
+Disallow: /dist/
+
+# Autoriser spécifiquement le sitemap
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Autoriser les ressources importantes
+Allow: /assets/
+Allow: /images/
+Allow: /videos/
+Allow: /css/
+Allow: /js/
+Allow: /fonts/
+
+# Règles spécifiques pour Google
+User-agent: Googlebot
+Allow: /
+Disallow: /search
+Disallow: /*?*
+Crawl-delay: 1
+
+# Règles pour Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Règles pour les autres moteurs de recherche
+User-agent: Slurp
+Allow: /
+Crawl-delay: 3
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Interdire les bots malveillants
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MajesticSEO
+Disallow: /
+
+# Interdire les scrapers de contenu
+User-agent: HTTrack
+Disallow: /
+
+User-agent: wget
+Disallow: /
+
+User-agent: WebReaper
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+# Localisation du sitemap
+Sitemap: https://avenement-agency.com/sitemap.xml
+
+# Informations de contact pour les webmasters
+# Contact: webmaster@avenement-agency.com
+# Site web: https://avenement-agency.com
+
+# Délai de crawl par défaut (en secondes)
+Crawl-delay: 1
+
+# Heures de visite préférées (optionnel)
+# Visit-time: 0100-0600
+
+# Fréquence de visite demandée
+# Request-rate: 1/10s
