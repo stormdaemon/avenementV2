@@ -94,7 +94,7 @@ export const useServiceSEOData = (serviceName: string, serviceDescription: strin
       description: serviceDescription,
       provider: {
         '@type': 'Organization',
-        name: 'Agence Avènement',
+        name: 'Agence Ultreiaevent',
         url: 'https://avenement-agency.com'
       },
       url: `https://avenement-agency.com/services/${serviceSlug}`
@@ -130,7 +130,7 @@ export const usePageSEOData = (pageTitle: string, pageDescription: string, pageP
       url: `https://avenement-agency.com${pagePath}`,
       isPartOf: {
         '@type': 'WebSite',
-        name: 'Agence Avènement',
+        name: 'Agence Ultreiaevent',
         url: 'https://avenement-agency.com'
       }
     }
@@ -142,37 +142,37 @@ export const usePageSEOData = (pageTitle: string, pageDescription: string, pageP
  */
 export const useAboutSEOData = (): SEOData => {
   return {
-    title: 'À Propos - Agence Avènement | Notre Mission & Équipe',
-    description: 'Découvrez l\'équipe et la mission d\'Avènement, agence spécialisée dans la communication catholique. Notre expertise au service de votre communauté religieuse.',
+    title: 'À Propos - Agence Ultreiaevent | Notre Mission & Équipe',
+    description: 'Découvrez l\'équipe et la mission d\'Ultreiaevent, agence spécialisée dans la communication catholique. Notre expertise au service de votre communauté religieuse.',
     keywords: [
       'agence communication catholique',
-      'équipe avènement',
+      'équipe ultreiaevent',
       'mission communication religieuse',
       'expertise diocèse',
       'spécialiste paroisse'
     ],
     canonical: 'https://avenement-agency.com/about',
     openGraph: {
-      title: 'À Propos - Agence Avènement',
-      description: 'Découvrez l\'équipe et la mission d\'Avènement, agence spécialisée dans la communication catholique.',
+      title: 'À Propos - Agence Ultreiaevent',
+      description: 'Découvrez l\'équipe et la mission d\'Ultreiaevent, agence spécialisée dans la communication catholique.',
       url: 'https://avenement-agency.com/about',
       type: 'website',
       image: 'https://avenement-agency.com/images/about-og.jpg'
     },
     twitter: {
       card: 'summary',
-      title: 'À Propos - Agence Avènement',
-      description: 'Découvrez l\'équipe et la mission d\'Avènement, agence spécialisée dans la communication catholique.'
+      title: 'À Propos - Agence Ultreiaevent',
+      description: 'Découvrez l\'équipe et la mission d\'Ultreiaevent, agence spécialisée dans la communication catholique.'
     },
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'AboutPage',
-      name: 'À Propos - Agence Avènement',
-      description: 'Page à propos de l\'Agence Avènement',
+      name: 'À Propos - Agence Ultreiaevent',
+      description: 'Page à propos de l\'Agence Ultreiaevent',
       url: 'https://avenement-agency.com/about',
       mainEntity: {
         '@type': 'Organization',
-        name: 'Agence Avènement',
+        name: 'Agence Ultreiaevent',
         description: 'Agence de communication spécialisée dans le secteur catholique'
       }
     }
@@ -184,7 +184,7 @@ export const useAboutSEOData = (): SEOData => {
  */
 export const useServicesSEOData = (): SEOData => {
   return {
-    title: 'Nos Services - Agence Avènement | Communication Catholique Complète',
+    title: 'Nos Services - Agence Ultreiaevent | Communication Catholique Complète',
     description: 'Découvrez tous nos services de communication catholique : diffusion en direct, événements, sites web, films institutionnels, réseaux sociaux et plus encore.',
     keywords: [
       'services communication catholique',
@@ -196,7 +196,7 @@ export const useServicesSEOData = (): SEOData => {
     ],
     canonical: 'https://avenement-agency.com/services',
     openGraph: {
-      title: 'Nos Services - Agence Avènement',
+      title: 'Nos Services - Agence Ultreiaevent',
       description: 'Découvrez tous nos services de communication catholique : diffusion, événements, digital et audiovisuel.',
       url: 'https://avenement-agency.com/services',
       type: 'website',
@@ -204,13 +204,13 @@ export const useServicesSEOData = (): SEOData => {
     },
     twitter: {
       card: 'summary',
-      title: 'Nos Services - Agence Avènement',
+      title: 'Nos Services - Agence Ultreiaevent',
       description: 'Découvrez tous nos services de communication catholique : diffusion, événements, digital et audiovisuel.'
     },
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
-      name: 'Services - Agence Avènement',
+      name: 'Services - Agence Ultreiaevent',
       description: 'Liste complète des services de communication catholique',
       url: 'https://avenement-agency.com/services'
     }
@@ -222,18 +222,18 @@ export const useServicesSEOData = (): SEOData => {
  */
 export const useContactSEOData = (): SEOData => {
   return {
-    title: 'Contact - Agence Avènement | Parlons de Votre Projet',
-    description: 'Contactez l\'Agence Avènement pour discuter de votre projet de communication catholique. Devis gratuit et conseil personnalisé pour diocèses et paroisses.',
+    title: 'Contact - Agence Ultreiaevent | Parlons de Votre Projet',
+    description: 'Contactez l\'Agence Ultreiaevent pour discuter de votre projet de communication catholique. Devis gratuit et conseil personnalisé pour diocèses et paroisses.',
     keywords: [
       'contact agence communication catholique',
       'devis communication religieuse',
       'conseil diocèse',
       'projet paroisse',
-      'agence avènement contact'
+      'agence ultreiaevent contact'
     ],
     canonical: 'https://avenement-agency.com/contact',
     openGraph: {
-      title: 'Contact - Agence Avènement',
+      title: 'Contact - Agence Ultreiaevent',
       description: 'Contactez-nous pour discuter de votre projet de communication catholique. Devis gratuit et conseil personnalisé.',
       url: 'https://avenement-agency.com/contact',
       type: 'website',
@@ -241,14 +241,14 @@ export const useContactSEOData = (): SEOData => {
     },
     twitter: {
       card: 'summary',
-      title: 'Contact - Agence Avènement',
+      title: 'Contact - Agence Ultreiaevent',
       description: 'Contactez-nous pour discuter de votre projet de communication catholique.'
     },
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'ContactPage',
-      name: 'Contact - Agence Avènement',
-      description: 'Page de contact de l\'Agence Avènement',
+      name: 'Contact - Agence Ultreiaevent',
+      description: 'Page de contact de l\'Agence Ultreiaevent',
       url: 'https://avenement-agency.com/contact'
     }
   };

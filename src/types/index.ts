@@ -1,4 +1,4 @@
-// Types pour l'agence Avènement
+// Types pour l'agence Ultreiaevent
 
 export interface Service {
   id: string;

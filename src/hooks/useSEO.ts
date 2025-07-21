@@ -215,19 +215,19 @@ export const useHomeSEO = () => {
  */
 export const usePageSEO = (pageTitle: string, pageDescription: string, pagePath: string) => {
   const seoData: SEOData = {
-    title: `${pageTitle} - Agence Avènement`,
+    title: `${pageTitle} - Agence Ultreiaevent`,
     description: pageDescription,
     keywords: ['agence communication catholique', pageTitle.toLowerCase()],
     canonical: `https://avenement-agency.com${pagePath}`,
     openGraph: {
-      title: `${pageTitle} - Agence Avènement`,
+      title: `${pageTitle} - Agence Ultreiaevent`,
       description: pageDescription,
       url: `https://avenement-agency.com${pagePath}`,
       type: 'article'
     },
     twitter: {
       card: 'summary',
-      title: `${pageTitle} - Agence Avènement`,
+      title: `${pageTitle} - Agence Ultreiaevent`,
       description: pageDescription
     }
   };
