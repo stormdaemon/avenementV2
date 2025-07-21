@@ -244,4 +244,42 @@ body::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
+
+  /* Mobile modal optimizations */
+  @media (max-width: 640px) {
+    .modal-container {
+      touch-action: manipulation;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+    }
+    
+    .modal-content {
+      min-height: 0;
+      flex-shrink: 1;
+    }
+    
+    /* Improve touch targets */
+    .touch-target {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Prevent zoom on input focus */
+    input, select, textarea {
+      font-size: 16px;
+    }
+  }
+
+  /* Enhanced responsive breakpoints */
+  @media (min-width: 320px) and (max-width: 480px) {
+    .mobile-portrait {
+      padding: 0.75rem;
+    }
+  }
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+    .tablet-portrait {
+      padding: 1rem;
+    }
+  }
 }

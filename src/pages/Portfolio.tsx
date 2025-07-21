@@ -14,6 +14,7 @@ const Portfolio: React.FC = () => {
   
   const [selectedCategory, setSelectedCategory] = useState('Tous');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   const categories = ['Tous', 'Sites Web', 'Web Radio', 'Documentaire', 'Landing Page'];
 
@@ -67,6 +68,19 @@ const Portfolio: React.FC = () => {
   const filteredProjects = selectedCategory === 'Tous'
     ? projects
     : projects.filter(project => project.category === selectedCategory);
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLDivElement;
+    const scrollTop = target.scrollTop;
+    const scrollHeight = target.scrollHeight - target.clientHeight;
+    const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    setScrollProgress(progress);
+  };
+
+  const openProject = (project: Project) => {
+    setSelectedProject(project);
+    setScrollProgress(0); // Reset scroll progress when opening new modal
+  };
 
   const stats = [
     { icon: Users, value: '500+', label: 'Clients Satisfaits' },
@@ -185,7 +199,7 @@ const Portfolio: React.FC = () => {
                   style={{
                     transformStyle: 'preserve-3d'
                   }}
-                  onClick={() => setSelectedProject(project)}
+                  onClick={() => openProject(project)}
                 >
                   {/* Tablette tactile design */}
                   <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-4 shadow-2xl border border-slate-700/50 group-hover:border-gold-400/30 transition-all duration-500">
@@ -281,32 +295,29 @@ const Portfolio: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-start justify-center p-2 sm:p-4 pt-20 sm:pt-24 touch-none modal-container"
             onClick={() => setSelectedProject(null)}
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
-              className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl shadow-2xl max-w-5xl w-full max-h-[90vh] outline-none focus:outline-none overflow-hidden"
-              style={{
-                aspectRatio: '4/3'
-              }}
+              className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl w-full max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-5xl h-[70vh] sm:h-[90vh] md:max-h-[90vh] outline-none focus:outline-none overflow-hidden sm:aspect-[4/3] modal-content"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Bouton de fermeture iPad style */}
+              {/* Bouton de fermeture responsive */}
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 z-10 w-8 h-8 bg-black/70 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-colors border border-gray-600"
+                className="absolute top-16 right-3 sm:top-8 sm:right-4 z-30 w-8 h-8 sm:w-10 sm:h-10 bg-black/70 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-colors border border-gray-600 text-sm sm:text-base touch-target"
               >
                 ✕
               </button>
               
-              {/* Écran de l'iPad */}
-              <div className="bg-black rounded-2xl shadow-inner h-full overflow-hidden">
-                {/* Barre de statut iPad */}
-                <div className="bg-black px-4 py-2 flex items-center justify-between text-white text-sm border-b border-gray-800">
-                  <div className="flex items-center space-x-2">
+              {/* Écran responsive */}
+               <div className="bg-black rounded-xl sm:rounded-2xl shadow-inner h-full overflow-hidden relative">
+                {/* Barre de statut responsive */}
+                <div className="bg-black px-3 sm:px-4 py-2 flex items-center justify-between text-white text-xs sm:text-sm border-b border-gray-800">
+                  <div className="flex items-center space-x-1 sm:space-x-2">
                     <div className="flex space-x-1">
                       <div className="w-1 h-1 bg-white rounded-full"></div>
                       <div className="w-1 h-1 bg-white rounded-full"></div>
@@ -314,32 +325,47 @@ const Portfolio: React.FC = () => {
                     </div>
                     <span className="text-xs text-gray-400">Portfolio</span>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-1 sm:space-x-2">
                     <span className="text-xs text-gray-400">100%</span>
-                    <div className="w-6 h-3 border border-white rounded-sm">
+                    <div className="w-4 h-2 sm:w-6 sm:h-3 border border-white rounded-sm">
                       <div className="w-full h-full bg-green-400 rounded-sm"></div>
                     </div>
                   </div>
                 </div>
                 
-                {/* Contenu principal */}
-                <div className="p-8 h-full overflow-y-auto scrollbar-hide">
-                  {/* Header du projet */}
-                   <div className="mb-8">
-                     <h2 className="text-3xl font-bold text-white mb-4">
+                {/* Indicateur de scroll mobile uniquement */}
+                <div className="sm:hidden bg-black px-4 py-2 border-b border-gray-800">
+                  <div className="w-full h-0.5 bg-gray-700 rounded-full overflow-hidden">
+                    <div 
+                      className="h-full bg-gradient-to-r from-gold-400 to-gold-600 rounded-full transition-all duration-300 ease-out"
+                      style={{
+                        width: `${scrollProgress}%`
+                      }}
+                    ></div>
+                  </div>
+                </div>
+                 
+                 {/* Contenu principal responsive */}
+                   <div 
+                     className="p-4 sm:p-6 md:p-8 pb-20 sm:pb-8 h-full overflow-y-auto scrollbar-hide overscroll-contain"
+                     onScroll={handleScroll}
+                   >
+                  {/* Header du projet responsive */}
+                   <div className="mb-4 sm:mb-6 md:mb-8">
+                     <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-3 md:mb-4 leading-tight">
                        {selectedProject.title}
                      </h2>
-                     <div className="flex items-center space-x-6 text-gray-300">
+                     <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 md:gap-6 text-sm sm:text-base text-gray-300">
                        <span className="text-gold-400 font-medium">{selectedProject.category}</span>
-                       <span className="text-gray-500">•</span>
-                       <span>{selectedProject.client}</span>
-                       <span className="text-gray-500">•</span>
-                       <span>{selectedProject.date}</span>
+                       <span className="hidden sm:inline text-gray-500">•</span>
+                       <span className="truncate">{selectedProject.client}</span>
+                       <span className="hidden sm:inline text-gray-500">•</span>
+                       <span className="text-sm text-gray-400">{selectedProject.date}</span>
                      </div>
                    </div>
 
-                   {/* Image du projet */}
-                   <div className="relative h-80 rounded-2xl mb-8 overflow-hidden shadow-2xl">
+                   {/* Image du projet responsive */}
+                   <div className="relative h-48 sm:h-64 md:h-80 rounded-xl sm:rounded-2xl mb-4 sm:mb-6 md:mb-8 overflow-hidden shadow-2xl">
                      <img 
                        src={selectedProject.image} 
                        alt={selectedProject.title}
@@ -357,35 +383,35 @@ const Portfolio: React.FC = () => {
                      </div>
                    </div>
 
-                   {/* Description */}
-                   <p className="text-gray-300 leading-relaxed mb-8 text-base">
+                   {/* Description responsive */}
+                   <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 md:mb-8 text-sm sm:text-base">
                      {selectedProject.description}
                    </p>
 
-                   {/* Tags */}
-                   <div className="flex flex-wrap gap-3 mb-8">
+                   {/* Tags responsive */}
+                   <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6 md:mb-8">
                      {selectedProject.tags.map((tag) => (
                        <span
                          key={tag}
-                         className="px-4 py-2 bg-gold-400/20 text-gold-400 rounded-full text-sm font-medium"
+                         className="px-3 py-1 sm:px-4 sm:py-2 bg-gold-400/20 text-gold-400 rounded-full text-xs sm:text-sm font-medium"
                        >
                          {tag}
                        </span>
                      ))}
                    </div>
 
-                   {/* Bouton d'action */}
+                   {/* Bouton d'action responsive */}
                    {selectedProject.url && (
-                     <div className="flex justify-center pt-4">
+                     <div className="flex justify-center pt-2 sm:pt-4">
                        <motion.a
                          href={selectedProject.url}
                          target="_blank"
                          rel="noopener noreferrer"
                          whileHover={{ scale: 1.05 }}
                          whileTap={{ scale: 0.95 }}
-                         className="inline-flex items-center space-x-3 bg-gradient-to-r from-gold-400 to-gold-600 text-white px-8 py-4 rounded-2xl font-medium hover:from-gold-500 hover:to-gold-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                         className="inline-flex items-center space-x-2 sm:space-x-3 bg-gradient-to-r from-gold-400 to-gold-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl font-medium hover:from-gold-500 hover:to-gold-700 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base"
                        >
-                         <ExternalLink className="w-5 h-5" />
+                         <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
                          <span>Visiter le site</span>
                        </motion.a>
                      </div>
