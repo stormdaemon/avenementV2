@@ -31,7 +31,7 @@ export const useSEO = (seoData: SEOData) => {
     if (seoData.openGraph) {
       updateMetaTag('property', 'og:title', seoData.openGraph.title || seoData.title);
       updateMetaTag('property', 'og:description', seoData.openGraph.description || seoData.description);
-      updateMetaTag('property', 'og:url', seoData.openGraph.url || seoData.canonical);
+      updateMetaTag('property', 'og:url', seoData.openGraph.url || seoData.canonical || '');
       
       if (seoData.openGraph.image) {
         updateMetaTag('property', 'og:image', seoData.openGraph.image);
@@ -217,6 +217,7 @@ export const usePageSEO = (pageTitle: string, pageDescription: string, pagePath:
   const seoData: SEOData = {
     title: `${pageTitle} - Agence Avènement`,
     description: pageDescription,
+    keywords: ['agence communication catholique', pageTitle.toLowerCase()],
     canonical: `https://avenement-agency.com${pagePath}`,
     openGraph: {
       title: `${pageTitle} - Agence Avènement`,

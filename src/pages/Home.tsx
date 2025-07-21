@@ -29,7 +29,6 @@ const Home: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: 'easeOut',
       },
     },
   };
@@ -42,14 +41,14 @@ const Home: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: 'easeOut' }}
+            transition={{ duration: 1 }}
             className="space-y-8"
           >
             <motion.h1
               className="text-5xl md:text-7xl lg:text-8xl font-bold text-white text-glow leading-tight"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
-              transition={{ duration: 1.2, ease: 'easeOut' }}
+              transition={{ duration: 1.2 }}
             >
               Avènement
               <span className="block text-gold-400 text-4xl md:text-5xl lg:text-6xl mt-4">
@@ -63,7 +62,7 @@ const Home: React.FC = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              Nous donnons vie à vos projets spirituels grâce à des solutions de communication 
+              Nous donnons vie à vos projets spirituels grâce à des solutions de communication
               innovantes et adaptées aux valeurs catholiques.
             </motion.p>
 
@@ -116,7 +115,7 @@ const Home: React.FC = () => {
             viewport={{ once: true }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
           >
-            {stats.map((stat, index) => {
+            {stats.map((stat) => {
               const Icon = stat.icon;
               return (
                 <motion.div
@@ -146,9 +145,13 @@ const Home: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Nos <span className="text-gold-400">Services</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto text-center">
-              Des solutions complètes pour amplifier votre message et toucher votre communauté
-            </p>
+
+
+            <div className="flex justify-center px-4">
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl text-center leading-relaxed">
+                Des solutions complètes pour amplifier votre message et toucher votre communauté
+              </p>
+            </div>
           </motion.div>
 
           <motion.div
@@ -158,7 +161,7 @@ const Home: React.FC = () => {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {services.slice(0, 6).map((service, index) => (
+            {services.slice(0, 6).map((service) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -196,6 +199,94 @@ const Home: React.FC = () => {
             <Link to="/services" className="btn-primary">
               Voir Tous Nos Services
             </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section Partenaires */}
+      <section className="section-padding bg-black/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Nos <span className="text-gold-400">Partenaires</span>
+            </h2>
+
+            <div className="flex justify-center px-4">
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl text-center leading-relaxed">
+                Nous collaborons avec des institutions et organisations de référence du monde catholique
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {[
+              {
+                title: "Le Baptême Catholique",
+                description: "Préparation et accompagnement spirituel pour le sacrement du baptême",
+                image: "https://heavenradio.fr/assets/png/baptemecatho-DdTvNFk4.png"
+              },
+              {
+                title: "La Mission Catholique",
+                description: "Dépliants missionnaires et outils pour l'évangélisation en paroisse",
+                image: "https://heavenradio.fr/assets/png/missioncatho-CYPb_6qv.png"
+              },
+              {
+                title: "Conférence des Évêques de France",
+                description: "Institution officielle de l'Église catholique en France",
+                image: "https://diocese44.fr/wp-content/uploads/2020/04/Logo-CEF-1280x640.jpeg"
+              },
+              {
+                title: "Site du Vatican",
+                description: "Site officiel du Saint-Siège et du Vatican",
+                image: "https://content.r9cdn.net/rimg/dimg/5e/b6/6c7d0b5d-hood-216983-166a2810358.jpg?crop=true&width=1020&height=498"
+              },
+              {
+                title: "Congrès Mission (Partenaire Officiel)",
+                description: "Événement majeur de l'évangélisation et de la mission",
+                image: "https://congresmission.com/wp-content/uploads/sites/14/2025/01/CM-LOGO-ORANGE-min-743x1024.png"
+              },
+              {
+                title: "Heaven Radio",
+                description: "La radio catholique 100% louange et adoration. Programmes spirituels quotidiens, prières, chapelet et musique chrétienne pour nourrir votre foi au quotidien",
+                image: "https://lebaptemecatholique.fr/assets/heavenradio.png"
+              }
+            ].map((partner) => (
+              <motion.div
+                key={partner.title}
+                variants={itemVariants}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="glass-card p-6 group cursor-pointer text-center"
+              >
+                <div className="mb-6">
+                  <img
+                    src={partner.image}
+                    alt={partner.title}
+                    className="w-full h-32 object-contain mx-auto rounded-lg bg-white/10 p-4"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                    }}
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-gold-400 transition-colors">
+                  {partner.title}
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {partner.description}
+                </p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>

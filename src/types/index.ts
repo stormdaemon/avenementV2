@@ -96,12 +96,4 @@ export interface AnimationVariants {
 }
 
 // Export par défaut pour compatibilité
-export default {
-  Service,
-  TeamMember,
-  Project,
-  ContactForm,
-  SEOData,
-  NavigationItem,
-  AnimationVariants
-};
+// Supprimé car les interfaces ne peuvent pas être exportées comme valeurs

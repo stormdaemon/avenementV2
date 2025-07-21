@@ -30,7 +30,6 @@ const Services: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: 'easeOut',
       },
     },
   };
@@ -50,7 +49,7 @@ const Services: React.FC = () => {
               Nos <span className="text-gold-400">Services</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed text-center">
-              Des solutions complètes et innovantes pour amplifier votre message catholique 
+              Des solutions complètes et innovantes pour amplifier votre message catholique
               et toucher votre communauté avec impact et authenticité.
             </p>
           </motion.div>
@@ -67,9 +66,9 @@ const Services: React.FC = () => {
             viewport={{ once: true }}
             className="grid grid-cols-1 lg:grid-cols-2 gap-12"
           >
-            {services.map((service, index) => {
+            {services.map((service) => {
               const IconComponent = iconMap[service.icon as keyof typeof iconMap];
-              
+
               return (
                 <motion.div
                   key={service.id}
@@ -83,7 +82,7 @@ const Services: React.FC = () => {
                         {IconComponent && <IconComponent className="w-10 h-10 text-white" />}
                       </div>
                     </div>
-                    
+
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-gold-400 transition-colors">
                         {service.title}
@@ -91,7 +90,7 @@ const Services: React.FC = () => {
                       <p className="text-gray-300 mb-6 leading-relaxed">
                         {service.description}
                       </p>
-                      
+
                       <div className="space-y-3 mb-8">
                         <h4 className="text-lg font-semibold text-gold-400">Fonctionnalités clés :</h4>
                         <ul className="space-y-2">
@@ -108,7 +107,7 @@ const Services: React.FC = () => {
                           )}
                         </ul>
                       </div>
-                      
+
                       <Link
                         to={`/services/${service.slug}`}
                         className="inline-flex items-center bg-gradient-to-r from-gold-400 to-gold-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-gold-500 hover:to-gold-700 transition-all duration-300 group"
@@ -137,9 +136,13 @@ const Services: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Notre <span className="text-gold-400">Processus</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto text-center">
-              Une approche structurée pour garantir le succès de vos projets
-            </p>
+
+
+            <div className="flex justify-center px-4">
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl text-center leading-relaxed">
+                Une approche structurée pour garantir le succès de vos projets
+              </p>
+            </div>
           </motion.div>
 
           <motion.div
