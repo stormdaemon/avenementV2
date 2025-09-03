@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Star, Users, Award, Zap } from 'lucide-react';
 import { services } from '../services/data';
 import SEO from '../components/SEO';
+import RadioPlayer from '../components/RadioPlayer';
 import { useHomeSEOData } from '../hooks/useSEOData';
 
 const Home: React.FC = () => {
@@ -319,6 +320,9 @@ const Home: React.FC = () => {
         </div>
       </section>
       </div>
+      
+      {/* Radio Player flottant */}
+      <RadioPlayer />
     </>
   );
 };
