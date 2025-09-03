@@ -32,12 +32,6 @@ const RadioPlayer: React.FC<RadioPlayerProps> = ({ className = '' }) => {
     setIsMinimized(!isMinimized);
   };
 
-  const toggleMute = () => {
-    setIsMuted(!isMuted);
-    // Note: Actual mute functionality would need to interact with the iframe
-    // This is a visual indicator for now
-  };
-
   const closePlayer = () => {
     setIsVisible(false);
   };
