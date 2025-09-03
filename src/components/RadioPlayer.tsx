@@ -8,7 +8,6 @@ interface RadioPlayerProps {
 
 const RadioPlayer: React.FC<RadioPlayerProps> = ({ className = '' }) => {
   const [isMinimized, setIsMinimized] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
 
   // Load script for RadioKing player
@@ -91,9 +90,7 @@ const RadioPlayer: React.FC<RadioPlayerProps> = ({ className = '' }) => {
                   borderRadius: '5px',
                   width: '275px',
                   height: '275px',
-                  border: 'none',
-                  opacity: isMuted ? 0.5 : 1,
-                  transition: 'opacity 0.3s ease'
+                  border: 'none'
                 }}
                 frameBorder="0"
                 title="Heaven Radio Player"
