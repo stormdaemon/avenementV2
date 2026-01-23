@@ -51,6 +51,7 @@ export default function Navigation() {
             alt="ultreiaevent"
             width={48}
             height={48}
+            unoptimized
             className="w-12 h-12 rounded-full border-2 border-gold-400 object-cover"
           />
           <span className="text-2xl font-bold text-gold-400 text-glow">ultreiaevent</span>
