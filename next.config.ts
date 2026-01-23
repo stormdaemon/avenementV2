@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'res.cloudinary.com' },
       { protocol: 'https', hostname: 'bilan-previsionnel.fr' },
       { protocol: 'https', hostname: 'media.licdn.com' },
+      { protocol: 'https', hostname: 'ultreiaevent.com' },
     ],
   },
 };
