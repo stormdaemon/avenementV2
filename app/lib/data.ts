@@ -231,8 +231,8 @@ export const values = [
 ];
 
 export const team = [
-  { name: 'Samuel Armnius', role: 'CEO', image: '/team/sam.jpg', bio: 'Fondateur de l\'agence ultreiaevent.' },
-  { name: 'Théo Lafont', role: 'Développeur Full Stack', image: '/team/theo.jpg', bio: 'Développeur Full Stack avec 10 ans d\'expertise.' },
+  { name: 'Samuel Armnius', role: 'CEO', image: 'https://bilan-previsionnel.fr/wp-content/uploads/2020/11/Bilan-Previsionnel-presentation-portrait-img-1.jpg', bio: 'Fondateur de l\'agence ultreiaevent.' },
+  { name: 'Théo Lafont', role: 'Développeur Full Stack', image: 'https://media.licdn.com/dms/image/v2/D4E03AQGNVPqi0BY7GQ/profile-displayphoto-scale_100_100/B4EZvBNEvYKgAc-/0/1768472990560?e=1770854400&v=beta&t=LXZ9igBWkpZ70NG3-gLsBilmF-tBakdkzcp8xFqa7IU', bio: 'Développeur Full Stack avec 10 ans d\'expertise.' },
 ];
 
 export const faqs = [

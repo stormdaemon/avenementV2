@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'congresmission.com' },
       { protocol: 'https', hostname: 'theo-multimedia.com' },
       { protocol: 'https', hostname: 'res.cloudinary.com' },
+      { protocol: 'https', hostname: 'bilan-previsionnel.fr' },
+      { protocol: 'https', hostname: 'media.licdn.com' },
     ],
   },
 };
