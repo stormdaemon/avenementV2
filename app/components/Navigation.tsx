@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
@@ -46,7 +45,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <Image
+          <img
             src="/logo.png"
             alt="ultreiaevent"
             width={48}
