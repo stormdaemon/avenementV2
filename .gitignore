@@ -6,11 +6,29 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+bun-debug.log*
 
 node_modules
 dist
 dist-ssr
 *.local
+
+# Next.js
+.next/
+out/
+
+# Build
+*.tsbuildinfo
+next-env.d.ts
+
+# Bun debug
+bun-debug.log
+
+# Claude
+.claude/
+
+# Windows
+nul
 
 # Editor directories and files
 .vscode/*
