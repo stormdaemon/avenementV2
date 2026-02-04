@@ -68,7 +68,7 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           <div className="space-y-2">
             <label htmlFor="phone" className="block text-sm font-medium text-white">
-              Téléphone
+              Téléphone *
             </label>
             <input
               type="tel"
@@ -76,6 +76,7 @@ export default function ContactForm() {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
+              required
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-gold-400 focus:bg-white/15 transition-all"
               placeholder="Votre numéro de téléphone"
             />
