@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import VideoBackground from './components/VideoBackground';
 import RadioPlayer from './components/RadioPlayer';
+import ChristianEcosystemMenu from './components/ChristianEcosystemMenu';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </div>
         <RadioPlayer />
+        <ChristianEcosystemMenu />
       </body>
     </html>
   );
